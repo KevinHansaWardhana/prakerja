@@ -41,13 +41,13 @@ func loginHandler(c *gin.Context) {
 			"message": "can't bind struct",
 		})
 	}
-	if user.Username != "myname" {
+	if user.Username != "kevin" {
 		c.JSON(http.StatusUnauthorized, gin.H{
 			"status":  http.StatusUnauthorized,
 			"message": "wrong username or password",
 		})
 	} else {
-		if user.Password != "myname123" {
+		if user.Password != "kevin123" {
 			c.JSON(http.StatusUnauthorized, gin.H{
 				"status":  http.StatusUnauthorized,
 				"message": "wrong username or password",
